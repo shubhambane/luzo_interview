@@ -1,6 +1,8 @@
 # luzo_interview
 
-A new Flutter project.
+Luzo x Shubham Bane
+
+![Project Screenshot](assets/image1.png)
 
 ## Project Structure
 ```
