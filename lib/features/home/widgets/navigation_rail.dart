@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:luzo_interview/core/constants/app_constants.dart';
 
 import '../../../models/rail_item_model.dart';
 
@@ -67,10 +68,10 @@ class RailItem extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
+        width: MediaQuery.of(context).size.width * AppConstants.railWidth,
         padding: EdgeInsets.all(8),
         decoration: BoxDecoration(
           color: isSelected ? Color(0xFFe6ebef) : Colors.transparent,
-          // borderRadius: BorderRadius.circular(10),
           border: isSelected
               ? Border(
                   right: BorderSide(
