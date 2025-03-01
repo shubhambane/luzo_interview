@@ -18,6 +18,7 @@ class HomeScreen extends StatelessWidget {
       appBar: _buildAppBar(context),
       body: SafeArea(
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
@@ -33,6 +34,7 @@ class HomeScreen extends StatelessWidget {
 
   PreferredSizeWidget _buildAppBar(BuildContext context) {
     return AppBar(
+      titleSpacing: 0,
       surfaceTintColor: Colors.white,
       backgroundColor: Colors.white,
       leading: IconButton(
@@ -41,7 +43,14 @@ class HomeScreen extends StatelessWidget {
           MySnackbar.showSnackBar(context);
         },
       ),
-      title: Text("Men's Grooming"),
+      title: Text(
+        "Men's Grooming",
+        style: TextStyle(
+          color: Colors.black,
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
       centerTitle: false,
     );
   }
@@ -49,15 +58,17 @@ class HomeScreen extends StatelessWidget {
   Widget _buildMainContent(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width * AppConstants.mainContentWidth,
-      padding: EdgeInsets.all(AppConstants.defaultPadding),
+      padding: EdgeInsets.symmetric(
+        horizontal: AppConstants.defaultPadding,
+      ),
       child: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             BannerCarousel(),
-            SizedBox(height: 20),
-            TextFormField(decoration: AppTheme.searchDecoration),
             SizedBox(height: 10),
+            TextFormField(decoration: AppTheme.searchDecoration),
+            SizedBox(height: 8),
             _buildGenderSelection(),
             _buildServicesList(),
           ],
@@ -88,17 +99,17 @@ class HomeScreen extends StatelessWidget {
         VerticalTileWidget(
           lottie: "assets/man.json",
           title: "Beard Trimming",
-          value: 500,
+          value: 200,
         ),
         VerticalTileWidget(
           lottie: "assets/man.json",
-          title: "Hair Cut",
-          value: 500,
+          title: "Beard Styling",
+          value: 350,
         ),
         VerticalTileWidget(
           lottie: "assets/man.json",
-          title: "Face Care",
-          value: 500,
+          title: "Beard Colour",
+          value: 750,
           canAdd: true,
         ),
       ],

@@ -14,5 +14,9 @@ class AppTheme {
     ),
     prefixIcon: Icon(Icons.search, color: Colors.grey.shade600),
     labelText: 'Search for service..',
+    labelStyle: TextStyle(
+      color: Colors.grey.shade600,
+      fontSize: 14,
+    ),
   );
 }

@@ -15,6 +15,7 @@ class HorizontalTileWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
+        padding: EdgeInsets.symmetric(vertical: 5),
         decoration: BoxDecoration(
           border: Border.all(
             color: Colors.grey.shade400,
@@ -25,11 +26,13 @@ class HorizontalTileWidget extends StatelessWidget {
           ),
         ),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Lottie.asset(
               lottie,
-              height: 50,
-              width: 50,
+              height: 30,
+              width: 30,
             ),
             Text(title),
           ],

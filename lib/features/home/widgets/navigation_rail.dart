@@ -16,21 +16,31 @@ class _MyNavigationRailState extends State<MyNavigationRail> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
-        children: List.generate(
-          railItems.length,
-          (index) => RailItem(
-            imageUrl: railItems[index].imageUrl,
-            title: railItems[index].title,
-            isSelected: selectedIndex == index,
-            onTap: () {
-              setState(() {
-                selectedIndex = index;
-              });
-            },
+      child: Container(
+        decoration: BoxDecoration(
+          border: Border(
+            right: BorderSide(
+              color: Color(0x20a3b3c2),
+              width: 3,
+            ),
+          ),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: List.generate(
+            railItems.length,
+            (index) => RailItem(
+              imageUrl: railItems[index].imageUrl,
+              title: railItems[index].title,
+              isSelected: selectedIndex == index,
+              onTap: () {
+                setState(() {
+                  selectedIndex = index;
+                });
+              },
+            ),
           ),
         ),
       ),
@@ -59,10 +69,16 @@ class RailItem extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.all(8),
         decoration: BoxDecoration(
-          color: isSelected
-              ? Colors.lightBlue.withOpacity(0.2)
-              : Colors.transparent,
-          borderRadius: BorderRadius.circular(10),
+          color: isSelected ? Color(0xFFe6ebef) : Colors.transparent,
+          // borderRadius: BorderRadius.circular(10),
+          border: isSelected
+              ? Border(
+                  right: BorderSide(
+                    color: Color(0xFFa3b3c2),
+                    width: 3,
+                  ),
+                )
+              : null,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -89,6 +105,9 @@ class RailItem extends StatelessWidget {
             Text(
               title,
               textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 12,
+              ),
             ),
             SizedBox(height: 10),
           ],

@@ -3,7 +3,7 @@ class AppConstants {
   static const double railWidth = 0.25;
   static const double mainContentWidth = 0.75;
   static const double carouselAspectRatio = 16 / 9;
-  static const double carouselViewportFraction = 0.95;
+  static const double carouselViewportFraction = 1;
   static const double borderRadius = 10.0;
 }
 

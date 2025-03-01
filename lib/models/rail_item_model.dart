@@ -11,31 +11,31 @@ class RailItemModel {
 final List<RailItemModel> railItems = [
   RailItemModel(
     imageUrl: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f",
-    title: "Hair-cut & Style",
-  ),
-  RailItemModel(
-    imageUrl: "https://images.unsplash.com/photo-1622287162716-f311baa1a2b8",
-    title: "Beard Trim",
+    title: "Hair-cut, Wash & Style",
   ),
   RailItemModel(
     imageUrl: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937",
     title: "Hair Color",
   ),
   RailItemModel(
+    imageUrl: "https://images.unsplash.com/photo-1622287162716-f311baa1a2b8",
+    title: "Nair Bar",
+  ),
+  RailItemModel(
     imageUrl: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f",
-    title: "Massage",
+    title: "Face",
   ),
   RailItemModel(
     imageUrl: "https://images.unsplash.com/photo-1559599101-f09722fb4948",
-    title: "Manicure",
+    title: "Treatments",
   ),
   RailItemModel(
     imageUrl: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f",
-    title: "Hair-cut & Style",
+    title: "Massage & Spa",
   ),
   RailItemModel(
     imageUrl: "https://images.unsplash.com/photo-1622287162716-f311baa1a2b8",
-    title: "Beard Trim",
+    title: "Men's Grooming",
   ),
   RailItemModel(
     imageUrl: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937",

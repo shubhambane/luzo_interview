@@ -37,18 +37,19 @@ class VerticalTileWidget extends StatelessWidget {
             children: [
               Lottie.asset(
                 lottie,
-                height: 40,
-                width: 40,
+                height: 30,
+                width: 30,
                 repeat: false,
               ),
-              SizedBox(height: 7),
+              SizedBox(height: 3),
               Text(
                 title,
                 style: TextStyle(
+                  fontSize: 15,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 3),
+              SizedBox(height: 1),
               Text(
                 "From ₹ ${value.toString()}",
                 style: TextStyle(
@@ -63,6 +64,7 @@ class VerticalTileWidget extends StatelessWidget {
                 textDirection: TextDirection.rtl,
                 child: ElevatedButton.icon(
                   style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.symmetric(horizontal: 15),
                     foregroundColor: Colors.blue,
                     backgroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
@@ -86,7 +88,14 @@ class VerticalTileWidget extends StatelessWidget {
                       : null,
                 ),
               ),
-              canAdd ? Text("customisable") : SizedBox(),
+              canAdd
+                  ? Text(
+                      "customisable",
+                      style: TextStyle(
+                        fontSize: 10,
+                      ),
+                    )
+                  : SizedBox(),
             ],
           ),
         ],

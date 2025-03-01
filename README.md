@@ -2,6 +2,28 @@
 
 A new Flutter project.
 
+## Project Structure
+```
+luzo_interview/
+├── assets/
+│   └── image1.png
+├── lib/
+│   ├── main.dart
+│   ├── screens/
+│   ├── widgets/
+│   ├── utils/
+│   └── models/
+├── pubspec.yaml
+└── README.md
+```
+
+## Dependencies
+- device_preview: For device preview during development
+- cached_network_image: For efficient image caching
+- carousel_slider: For image sliders
+- lottie: For Lottie animations
+- google_fonts: For custom fonts
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.

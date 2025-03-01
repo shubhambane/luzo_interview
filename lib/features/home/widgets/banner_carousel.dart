@@ -38,7 +38,6 @@ class BannerItem extends StatelessWidget {
         ),
         borderRadius: BorderRadius.circular(AppConstants.borderRadius),
       ),
-      child: Text(index.toString()),
     );
   }
 }
